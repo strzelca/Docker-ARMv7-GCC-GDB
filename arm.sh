@@ -6,7 +6,7 @@ if [ -f $COMPOSE_FILE ]; then
   IS_COMPOSE=1
 fi
 
-ARGS="run --rm -it"
+ARGS="run --rm"
 VOLUME="-v ./:/usr/src"
 
 # ATTENTION TO CHANGE CONTAINER NAME IF COMPOSE IS USED
