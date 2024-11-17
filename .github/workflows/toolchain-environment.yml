@@ -1,0 +1,26 @@
+name: Test ARMv7 Toolchain
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+    - name: Setup compilation env
+      run: |
+        chmod +x arm.sh; \
+        echo "main(){}" > main.c
+    - name: Test compilation
+      run: ./arm.sh compile main.c main
+    - name: Test executable
+      run: ./arm.sh run main
