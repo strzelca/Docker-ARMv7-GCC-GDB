@@ -16,7 +16,7 @@ QEMU="qemu-arm"
 
 CC="arm-linux-gnueabihf-gcc"
 GDB="gdb-multiarch"
-FLAGS="-z noexecstack -static -fno-pie -no-pie -ggdb3 -mcpu=cortex-a53 -march=armv7-a"
+FLAGS="-z noexecstack -static -fno-pie -no-pie -ggdb3"
 
 if [[ $IS_COMPOSE -eq 1 ]]; then
   case $1 in 
