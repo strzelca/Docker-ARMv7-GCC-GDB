@@ -3,7 +3,7 @@
 This setup is supported on every platform supported by the `arm-linux-gnueabihf` toolchain
 
 - **Dockerfile** is based on `ubuntu:latest`
-- **arm.sh** is a shortand for Docker's command and automatize debugging using `quemu-arm` and `gdb-multiarch`
+- **arm.sh** is a shortand for Docker's command and automatize debugging using `qemu-arm` and `gdb-multiarch`
 
 - **compose.yml** in Compose V2 format is optional for custom port mapping or volumes, **arm.sh** is enable to recognise *compose.yml* file and adapt. **ATTENTION**: you must change container name in **arm.sh** according to compose settings.
 
