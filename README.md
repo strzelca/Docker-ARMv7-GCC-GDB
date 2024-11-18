@@ -20,7 +20,7 @@ Command available:
 - `./arm.sh debug <executable>` run your executable in *qemu-arm* and attach *gdb-multiarch* to its execution (killing execution on gdb kills it on qemu too, shutting down the current container)
 
 ## Contributors
-Thanks to Prof. Marco Danelutto for Dockerfile base 
+Thanks to Prof. Marco D. for Dockerfile base 
 
 GPLv3 Public License 
 
